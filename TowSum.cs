@@ -8,36 +8,8 @@ namespace Problems
 {
     public class TowSum
     {
-        public static int[] TwoSum (int[] nums, int target)
-        {
-
-            Dictionary<int, int> indexes = new Dictionary<int, int>();
-
-            for (int i = 0; i < nums.Length; i++)
-            {
-                if (indexes.ContainsKey(nums[i]))
-                {
-                    continue;
-                }
-
-                indexes[nums[i]] = i;
-            }
-
-            foreach (int number1 in indexes.Keys)
-            {
-                foreach (int number2 in indexes.Keys)
-                {
-                    Console.WriteLine(number1 + " - " + number2);
-                    if((number1 + number2) == target)
-                    {
-                        return [indexes[number1], indexes[number2]];
-                    }
-                }
-            }
-            return [];
-        }
-
-        public static int[] TwoSumaaa(int[] nums, int target)
+      
+        public static int[] TwoSum(int[] nums, int target)
         {
             Dictionary<int, bool> alreadySum = new Dictionary<int, bool>();
 
